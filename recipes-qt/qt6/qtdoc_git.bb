@@ -16,26 +16,26 @@ include recipes-qt/qt6/qt6-git.inc
 include recipes-qt/qt6/qt6.inc
 
 DEPENDS += "\
-    qtbase \
-    qtcharts \
-    qtdeclarative qtdeclarative-native \
+    qtbase6 \
+    qtcharts6 \
+    qtdeclarative6 qtdeclarative6-native \
     qtgraphs \
-    qtlocation \
-    qtmultimedia \
-    qtpositioning \
-    qtquick3d qtquick3d-native \
-    qtsensors \
-    qtshadertools-native \
-    qtsvg \
-    qtwebsockets \
+    qtlocation6 \
+    qtmultimedia6 \
+    qtpositioning6 \
+    qtquick3d6 qtquick3d6-native \
+    qtsensors6 \
+    qtshadertools6-native \
+    qtsvg6 \
+    qtwebsockets6 \
 "
-DEPENDS:append:aarch64 = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf', '', d)} qtquick3dphysics"
-DEPENDS:append:arm = " qtquick3dphysics"
-DEPENDS:append:armv6 = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf', '', d)}"
-DEPENDS:append:armv7a = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf', '', d)}"
-DEPENDS:append:armv7ve = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf', '', d)}"
-DEPENDS:append:x86 = " qtquick3dphysics"
-DEPENDS:append:x86-64 = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf', '', d)} qtquick3dphysics"
+DEPENDS:append:aarch64 = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf6', '', d)} qtquick3d6physics"
+DEPENDS:append:arm = " qtquick3d6physics"
+DEPENDS:append:armv6 = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf6', '', d)}"
+DEPENDS:append:armv7a = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf6', '', d)}"
+DEPENDS:append:armv7ve = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf6', '', d)}"
+DEPENDS:append:x86 = " qtquick3d6physics"
+DEPENDS:append:x86-64 = " ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtpdf6', '', d)} qtquick3d6physics"
 
 PACKAGECONFIG ?= "examples"
 

@@ -19,7 +19,7 @@ inherit qt6-cmake
 
 require recipes-qt/qt6/qt6-git.inc
 
-QT_GIT_PROJECT = "pyside"
+QT6_GIT_PROJECT = "pyside"
 QT_MODULE = "pyside-setup"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/pyside6:"

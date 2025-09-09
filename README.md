@@ -69,7 +69,7 @@ accepts the license using LICENSE_FLAGS_ACCEPTED = 'commercial_ffmpeg', the FFmp
 support is enabled in Qt Multimedia. If user doesn't accept the license,
 Qt Multimedia only uses GStreamer.
 
-[1]: https://doc.qt.io/qt-6/qtmultimedia-index.html#ffmpeg-as-the-default-backend
+[1]: https://doc.qt.io/qt-6/qtmultimedia6-index.html#ffmpeg-as-the-default-backend
 
 Contributing
 ------------

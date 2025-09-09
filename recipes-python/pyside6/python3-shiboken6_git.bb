@@ -1,6 +1,6 @@
 require python3-pyside6.inc
 
-DEPENDS += "qtbase clang-native python3-shiboken6-native"
+DEPENDS += "qtbase6 clang-native python3-shiboken6-native"
 
 OECMAKE_SOURCEPATH = "${S}/sources/shiboken6"
 

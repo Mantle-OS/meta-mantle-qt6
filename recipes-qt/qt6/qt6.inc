@@ -8,7 +8,7 @@ EXTRA_QMAKEVARS_PRE += "${@bb.utils.contains('PACKAGECONFIG', 'examples', 'QT_BU
 EXTRA_QMAKEVARS_PRE += "${@bb.utils.contains('PACKAGECONFIG', 'tests', 'QT_BUILD_PARTS+=tests', 'QT_BUILD_PARTS-=tests', d)}"
 
 # If Qt6 (qtbase) is machine specific, then everything will be,
-# because the (initial) qtbase configuration becomes part of Qt5/qmake
+# because the (initial) qtbase6 configuration becomes part of Qt5/qmake
 python __anonymous() {
     barch = d.getVar("BUILD_ARCH", True) or ''
     tarch = d.getVar("TARGET_ARCH", True) or ''
@@ -26,7 +26,7 @@ python __anonymous() {
         d.getVar('BPN', True) == 'qmlcompilerplus' or
         d.getVar('CLASSOVERRIDE', True) != 'class-target'):
         return
-    if bb.utils.contains('DEPENDS', "qtdeclarative-native", True, False, d):
+    if bb.utils.contains('DEPENDS', "qtdeclarative6-native", True, False, d):
         d.appendVar("DEPENDS", " qmlcompilerplus-native")
 }
 
@@ -85,9 +85,9 @@ FILES:${PN}-dev += " \
     ${QT6_INSTALL_LIBDIR}/*.prl \
     ${QT6_INSTALL_LIBDIR}/*.la \
     ${QT6_INSTALL_LIBDIR}/cmake \
-    ${QT6_INSTALL_LIBDIR}/metatypes \
-    ${QT6_INSTALL_LIBDIR}/pkgconfig \
-    ${QT6_INSTALL_LIBDIR}/sbom \
+    ${QT6_INSTALL_LIBDIR}/qt6/metatypes \
+    ${QT6_INSTALL_LIBDIR}/qt6/pkgconfig \
+    ${QT6_INSTALL_LIBDIR}/qt6/sbom \
     ${QT6_INSTALL_MKSPECSDIR} \
     ${QT6_INSTALL_QMLDIR}/*.qmltypes \
     ${QT6_INSTALL_QMLDIR}/*/*.qmltypes \

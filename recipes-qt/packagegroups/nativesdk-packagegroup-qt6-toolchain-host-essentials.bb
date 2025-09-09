@@ -9,10 +9,10 @@ inherit packagegroup nativesdk
 PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
 
 RDEPENDS:${PN} += " \
-    nativesdk-qtbase-dev \
-    nativesdk-qtbase-tools \
-    nativesdk-qtdeclarative-dev \
-    nativesdk-qtdeclarative-tools \
-    nativesdk-qttools-dev \
-    nativesdk-qttools-tools \
+    nativesdk-qtbase6-dev \
+    nativesdk-qtbase6-tools \
+    nativesdk-qtdeclarative6-dev \
+    nativesdk-qtdeclarative6-tools \
+    nativesdk-qttools6-dev \
+    nativesdk-qttools6-tools \
 "

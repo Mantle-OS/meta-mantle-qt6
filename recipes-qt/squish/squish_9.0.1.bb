@@ -25,8 +25,8 @@ SRC_URI[squish.sha256sum] = "4bad3059b3c24e1cbedea4ae261e0a1789ac0c4b74083c5216c
 SRC_URI[qt-squish-embedded.sha256sum] = "91201fcd038e48d7fefc68a3ad25dc6814999129679600e130e5451cd1a37d4f"
 
 DEPENDS += "\
-    qtbase \
-    qt5compat \
+    qtbase6 \
+    qt5compat6 \
 "
 
 PACKAGECONFIG ?= "\
@@ -34,9 +34,9 @@ PACKAGECONFIG ?= "\
     qml \
     ${@bb.utils.filter('DISTRO_FEATURES', 'wayland', d)} \
 "
-PACKAGECONFIG[appman] = ",,qtapplicationmanager"
-PACKAGECONFIG[qml] = ",,qtdeclarative qtdeclarative-native"
-PACKAGECONFIG[wayland] = "--enable-wayland,--disable-wayland,qtwayland qtwayland-native wayland wayland-native"
+PACKAGECONFIG[appman] = ",,qtapplicationmanager6"
+PACKAGECONFIG[qml] = ",,qtdeclarative6 qtdeclarative6-native"
+PACKAGECONFIG[wayland] = "--enable-wayland,--disable-wayland,qtwayland6 qtwayland6-native wayland wayland-native"
 
 lcl_maybe_fortify = ""
 OE_QMAKE_PATH_HOST_LIBEXECS = "${STAGING_DIR_NATIVE}/${QT6_INSTALL_LIBEXECDIR}"

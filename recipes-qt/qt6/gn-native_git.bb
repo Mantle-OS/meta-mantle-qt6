@@ -1,4 +1,4 @@
-require recipes-qt/qt6/qtwebengine.inc
+require recipes-qt/qt6/qtwebengine6.inc
 
 inherit native
 

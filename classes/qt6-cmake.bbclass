@@ -1,6 +1,6 @@
 inherit cmake python3native perlnative pkgconfig qt6-paths
 
-DEPENDS:prepend = "qtbase-native "
+DEPENDS:prepend = "qtbase6-native "
 
 QT_MESSAGE_LOG_LEVEL ?= "STATUS"
 EXTRA_OECMAKE += "\

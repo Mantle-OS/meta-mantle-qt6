@@ -9,26 +9,26 @@ inherit packagegroup nativesdk
 PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
 
 RDEPENDS:${PN} += " \
-    nativesdk-qtapplicationmanager-dev \
-    nativesdk-qtapplicationmanager-tools \
-    nativesdk-qtgrpc-dev \
-    nativesdk-qtgrpc-tools \
-    nativesdk-qtquick3d-dev \
-    nativesdk-qtquick3d-tools \
-    nativesdk-qtopcua-dev \
-    nativesdk-qtopcua-tools \
-    nativesdk-qtremoteobjects-dev \
-    nativesdk-qtremoteobjects-tools \
-    nativesdk-qtscxml-dev \
-    nativesdk-qtscxml-tools \
-    nativesdk-qtshadertools-dev \
-    nativesdk-qtshadertools-tools \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'nativesdk-qtwayland-dev nativesdk-qtwayland-tools', '', d)} \
+    nativesdk-qtapplicationmanager6-dev \
+    nativesdk-qtapplicationmanager6-tools \
+    nativesdk-qtgrpc6-dev \
+    nativesdk-qtgrpc6-tools \
+    nativesdk-qtquick3d6-dev \
+    nativesdk-qtquick3d6-tools \
+    nativesdk-qtopcua6-dev \
+    nativesdk-qtopcua6-tools \
+    nativesdk-qtremoteobjects6-dev \
+    nativesdk-qtremoteobjects6-tools \
+    nativesdk-qtscxml6-dev \
+    nativesdk-qtscxml6-tools \
+    nativesdk-qtshadertools6-dev \
+    nativesdk-qtshadertools6-tools \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'nativesdk-qtwayland6-dev nativesdk-qtwayland6-tools', '', d)} \
     ${FORLINUXHOST} \
 "
 
 FORLINUXHOST:mingw32 = ""
 FORLINUXHOST = " \
-    nativesdk-qtinterfaceframework-dev nativesdk-qtinterfaceframework-tools \
+    nativesdk-qtinterfaceframework6-dev nativesdk-qtinterfaceframework6-tools \
 "
 

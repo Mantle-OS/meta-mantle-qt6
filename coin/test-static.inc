@@ -1,3 +1,3 @@
-PACKAGECONFIG:append:pn-qtbase = " static"
+PACKAGECONFIG:append:pn-qtbase6 = " static"
 QT_PTEST_ENABLED = "0"
-PACKAGECONFIG:remove:pn-qtapplicationmanager = "multi-process"
+PACKAGECONFIG:remove:pn-qtapplicationmanager6 = "multi-process"

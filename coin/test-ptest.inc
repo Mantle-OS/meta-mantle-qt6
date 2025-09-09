@@ -3,49 +3,49 @@ QB_MEM = "-m 8192"
 TEST_SUITES = "ssh ping parselogs ptest"
 IMAGE_FEATURES += "ssh-server-dropbear"
 IMAGE_INSTALL:append = "\
-    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qt3d-ptest', '', d)} \
-    qt5compat-ptest \
-    qtbase-ptest \
-    qtcharts-ptest \
-    qtcoap-ptest \
-    qtconnectivity-ptest \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtdatavis3d-ptest', '', d)} \
-    qtdeclarative-ptest \
-    qtdeviceutilities-ptest \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qt3d6-ptest', '', d)} \
+    qt5compat6-ptest \
+    qtbase6-ptest \
+    qtcharts6-ptest \
+    qtcoap6-ptest \
+    qtconnectivity6-ptest \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtdatavis3d6-ptest', '', d)} \
+    qtdeclarative6-ptest \
+    qtdeviceutilities6-ptest \
     qtgraphs-ptest \
-    qtgrpc-ptest \
-    qthttpserver-ptest \
-    qtimageformats-ptest \
-    qtinterfaceframework-ptest \
-    qtlocation-ptest \
-    qtlottie-ptest \
-    qtmqtt-ptest \
-    qtmultimedia-ptest \
-    qtnetworkauth-ptest \
-    qtopcua-ptest \
-    qtpositioning-ptest \
-    qtquick3d-ptest \
-    qtquickdesigner-components-ptest \
-    qtquicktimeline-ptest \
-    qtremoteobjects-ptest \
-    qtscxml-ptest \
-    qtsensors-ptest \
-    qtserialbus-ptest \
-    qtserialport-ptest \
-    qtshadertools-ptest \
-    qtspeech-ptest \
-    qtsvg-ptest \
-    qttools-ptest \
-    qtvirtualkeyboard-ptest \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'qtwayland-ptest', '', d)} \
-    qtwebchannel-ptest \
-    qtwebsockets-ptest \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtpdf-ptest', '', d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtwebengine-ptest', '', d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtwebview-ptest', '', d)} \
+    qtgrpc6-ptest \
+    qthttpserver6-ptest \
+    qtimageformats6-ptest \
+    qtinterfaceframework6-ptest \
+    qtlocation6-ptest \
+    qtlottie6-ptest \
+    qtmqtt6-ptest \
+    qtmultimedia6-ptest \
+    qtnetworkauth6-ptest \
+    qtopcua6-ptest \
+    qtpositioning6-ptest \
+    qtquick3d6-ptest \
+    qtquickdesigner-components6-ptest \
+    qtquicktimeline6-ptest \
+    qtremoteobjects6-ptest \
+    qtscxml6-ptest \
+    qtsensors6-ptest \
+    qtserialbus6-ptest \
+    qtserialport6-ptest \
+    qtshadertools6-ptest \
+    qtspeech6-ptest \
+    qtsvg6-ptest \
+    qttools6-ptest \
+    qtvirtualkeyboard6-ptest \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'qtwayland6-ptest', '', d)} \
+    qtwebchannel6-ptest \
+    qtwebsockets6-ptest \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtpdf6-ptest', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtwebengine6-ptest', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtwebview6-ptest', '', d)} \
     ${@bb.utils.contains('QT_COMMERCIAL_MODULES', '1', '\
         qmlcompilerplus-ptest \
-        qtinsighttracker-ptest \
-        qtvncserver-ptest \
+        qtinsighttracker6-ptest \
+        qtvncserver6-ptest \
         ', '', d)} \
 "

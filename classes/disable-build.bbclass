@@ -1,5 +1,5 @@
 # Disable compilation steps for the recipe
-# Useful for passing CI builds when a Qt module does not compile with updated qtbase or qtdeclarative
+# Useful for passing CI builds when a Qt module does not compile with updated qtbase6 or qtdeclarative6
 # Should be used only with the addon modules not officially supported in the Qt releases
 
 do_configure[noexec] = "1"

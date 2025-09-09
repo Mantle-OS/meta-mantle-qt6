@@ -12,4 +12,4 @@ inherit qt6-cmake
 include recipes-qt/qt6/qt6-git.inc
 include recipes-qt/qt6/qt6.inc
 
-DEPENDS += "qtbase qtdeclarative qtdeclarative-native qtquick3d qtquick3d-native"
+DEPENDS += "qtbase6 qtdeclarative6 qtdeclarative6-native qtquick3d6 qtquick3d6-native"

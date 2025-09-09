@@ -8,11 +8,11 @@ inherit packagegroup
 PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
 
 RDEPENDS:${PN} += " \
-    qtbase \
-    qtdeclarative \
-    qtdeclarative-tools \
-    qttools \
-    qttools-tools \
-    qttranslations-qtbase \
-    qttranslations-qtdeclarative \
+    qtbase6 \
+    qtdeclarative6 \
+    qtdeclarative6-tools \
+    qttools6 \
+    qttools6-tools \
+    qttranslations6-qtbase6 \
+    qttranslations6-qtdeclarative6 \
 "

@@ -6,35 +6,35 @@ DEPENDS += "\
     ${PYSIDE_QT_MODULES} \
 "
 PYSIDE_QT_MODULES ?= "\
-    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qt3d', '', d)} \
-    qtbase \
-    qtcharts \
-    qtconnectivity \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtdatavis3d', '', d)} \
-    qtdeclarative \
-    qtdeclarative-native \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qt3d6', '', d)} \
+    qtbase6 \
+    qtcharts6 \
+    qtconnectivity6 \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'qtdatavis3d6', '', d)} \
+    qtdeclarative6 \
+    qtdeclarative6-native \
     qtgraphs \
-    ${@bb.utils.contains('QT_COMMERCIAL_MODULES', '1', 'qthttpserver', '', d)} \
-    qtlocation \
-    qtmultimedia \
-    qtnetworkauth \
-    qtpositioning \
-    qtquick3d \
-    qtquick3d-native \
-    qtremoteobjects \
-    qtremoteobjects-native \
-    qtscxml \
-    qtscxml-native \
-    qtsensors \
-    qtserialbus \
-    qtserialport \
-    qtspeech \
-    qtsvg \
-    qttools \
-    qtwebchannel \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtwebengine', '', d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtpdf', '', d)} \
-    qtwebsockets \
+    ${@bb.utils.contains('QT_COMMERCIAL_MODULES', '1', 'qthttpserver6', '', d)} \
+    qtlocation6 \
+    qtmultimedia6 \
+    qtnetworkauth6 \
+    qtpositioning6 \
+    qtquick3d6 \
+    qtquick3d6-native \
+    qtremoteobjects6 \
+    qtremoteobjects6-native \
+    qtscxml6 \
+    qtscxml6-native \
+    qtsensors6 \
+    qtserialbus6 \
+    qtserialport6 \
+    qtspeech6 \
+    qtsvg6 \
+    qttools6 \
+    qtwebchannel6 \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtwebengine6', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'webengine', 'qtpdf6', '', d)} \
+    qtwebsockets6 \
 "
 
 OECMAKE_SOURCEPATH = "${S}/sources/pyside6"
