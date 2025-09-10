@@ -9,7 +9,7 @@ DEPENDS += " \
     qemu-native \
     nss nss-native \
     qtbase6 qtdeclarative6 qtdeclarative6-native \
-    gn-native \
+    qt6-gn-native \
     python3-html5lib-native \
 "
 
