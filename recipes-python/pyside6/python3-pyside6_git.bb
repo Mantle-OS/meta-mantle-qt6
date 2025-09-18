@@ -14,7 +14,7 @@ PYSIDE_QT_MODULES ?= "\
     qtdeclarative6 \
     qtdeclarative6-native \
     qtgraphs \
-    ${@bb.utils.contains('QT_COMMERCIAL_MODULES', '1', 'qthttpserver6', '', d)} \
+    ${@bb.utils.contains('QT_COMMERCIAL_MODULES', '1', 'qthttpserver', '', d)} \
     qtlocation6 \
     qtmultimedia6 \
     qtnetworkauth6 \
