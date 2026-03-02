@@ -11,6 +11,7 @@ DEPENDS += " \
     qt6-gn-native \
     libxkbcommon \
     python3-html5lib-native \
+    libdrm \
 "
 
 EXTRA_OECMAKE += "\
