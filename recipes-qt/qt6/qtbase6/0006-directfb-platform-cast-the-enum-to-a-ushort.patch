@@ -1,0 +1,26 @@
+From dcd9eb716d6da254abd28c3c4576c6721b71f596 Mon Sep 17 00:00:00 2001
+From: jmills <josephjamesmills@gmail.com>
+Date: Thu, 5 Nov 2026 16:12:47 -0600
+Subject: [PATCH] directfb platform cast the enum to a ushort then char
+
+Upstream-Status: Pending
+---
+ src/plugins/platforms/directfb/qdirectfbinput.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/plugins/platforms/directfb/qdirectfbinput.cpp b/src/plugins/platforms/directfb/qdirectfbinput.cpp
+index c5aacad6cc5..cc915b2f4dd 100644
+--- a/src/plugins/platforms/directfb/qdirectfbinput.cpp
++++ b/src/plugins/platforms/directfb/qdirectfbinput.cpp
+@@ -153,7 +153,7 @@ void QDirectFbInput::handleKeyEvents(const DFBEvent &event)
+ 
+     QChar character;
+     if (DFB_KEY_TYPE(event.window.key_symbol) == DIKT_UNICODE)
+-        character = QChar(event.window.key_symbol);
++        character = QChar(static_cast<ushort>(event.window.key_symbol));
+     QWindow *tlw = m_tlwMap.value(event.window.window_id);
+     QWindowSystemInterface::handleKeyEvent(tlw, timestamp, type, key, modifiers, character);
+ }
+-- 
+2.55.0
+
